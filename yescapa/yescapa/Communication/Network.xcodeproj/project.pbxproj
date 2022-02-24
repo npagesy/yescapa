@@ -21,6 +21,8 @@
 		F2098D6027C6C68F00BB426C /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2098D5F27C6C68F00BB426C /* RequestError.swift */; };
 		F2098D6227C6C8FA00BB426C /* NetworkRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2098D6127C6C8FA00BB426C /* NetworkRouterTests.swift */; };
 		F2098D6427C6CB0000BB426C /* NetworkErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2098D6327C6CAFF00BB426C /* NetworkErrorTests.swift */; };
+		F2098E5527C7D78500BB426C /* VehiclesServiceProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2098E5427C7D78500BB426C /* VehiclesServiceProviderTests.swift */; };
+		F2098E5727C7D7A200BB426C /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2098E5627C7D7A200BB426C /* MockURLProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		F2098D5F27C6C68F00BB426C /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		F2098D6127C6C8FA00BB426C /* NetworkRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouterTests.swift; sourceTree = "<group>"; };
 		F2098D6327C6CAFF00BB426C /* NetworkErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorTests.swift; sourceTree = "<group>"; };
+		F2098E5427C7D78500BB426C /* VehiclesServiceProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesServiceProviderTests.swift; sourceTree = "<group>"; };
+		F2098E5627C7D7A200BB426C /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,9 +108,11 @@
 		F2098D1327C6C03700BB426C /* NetworkTests */ = {
 			isa = PBXGroup;
 			children = (
+				F2098E5827C7DE9200BB426C /* Mock */,
 				F2098D5827C6C18100BB426C /* DecoderTests.swift */,
 				F2098D6127C6C8FA00BB426C /* NetworkRouterTests.swift */,
 				F2098D6327C6CAFF00BB426C /* NetworkErrorTests.swift */,
+				F2098E5427C7D78500BB426C /* VehiclesServiceProviderTests.swift */,
 			);
 			path = NetworkTests;
 			sourceTree = "<group>";
@@ -129,6 +135,14 @@
 				F2098D5227C6C12B00BB426C /* Vehicle */,
 			);
 			path = ServiceProvider;
+			sourceTree = "<group>";
+		};
+		F2098E5827C7DE9200BB426C /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				F2098E5627C7D7A200BB426C /* MockURLProtocol.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +272,9 @@
 			files = (
 				F2098D5927C6C18100BB426C /* DecoderTests.swift in Sources */,
 				F2098D6227C6C8FA00BB426C /* NetworkRouterTests.swift in Sources */,
+				F2098E5727C7D7A200BB426C /* MockURLProtocol.swift in Sources */,
 				F2098D6427C6CB0000BB426C /* NetworkErrorTests.swift in Sources */,
+				F2098E5527C7D78500BB426C /* VehiclesServiceProviderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,14 +8,16 @@
 import Foundation
 
 public class URLSessionServiceProvider: ServiceProviderProtocol {
-    private let session = URLSession(configuration: URLSessionConfiguration.default)
+    private let session: URLSession
     
-    public init() {}
+    public init(urlSession: URLSession = .shared) {
+        self.session = urlSession
+    }
     
     public func execute(route: NetworkRouterProtocol, completion: @escaping (Result<Data, Error>) -> Void) {
         do {
             let request = try route.asURLRequest()
-            let urlSession = session.dataTask(with: request) { data, response, error in
+            session.dataTask(with: request) { data, response, error in
                 if error != nil {
                     completion(.failure(NetworkError.networkError))
                     return
@@ -29,8 +31,7 @@ public class URLSessionServiceProvider: ServiceProviderProtocol {
                 guard let data = data else { return }
                 completion(.success(data))
                 return
-            }
-            urlSession.resume()
+            }.resume()
         } catch {
             completion(.failure(NetworkError.technicalError))
         }
