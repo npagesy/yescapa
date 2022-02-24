@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F2098D5527C6C15E00BB426C /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2098D4427C6C11200BB426C /* Network.framework */; platformFilter = ios; };
+		F2098D5627C6C15E00BB426C /* Network.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F2098D4427C6C11200BB426C /* Network.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F2098E5027C7CE3400BB426C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F2098E5227C7CE3400BB426C /* Localizable.strings */; };
 		F248036727C574C800C6654E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F248036627C574C800C6654E /* AppDelegate.swift */; };
 		F248036B27C574C800C6654E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F248036A27C574C800C6654E /* ViewController.swift */; };
 		F248036E27C574C800C6654E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F248036C27C574C800C6654E /* Main.storyboard */; };
@@ -15,21 +18,26 @@
 		F248037E27C574CA00C6654E /* yescapaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F248037D27C574CA00C6654E /* yescapaTests.swift */; };
 		F248038827C574CA00C6654E /* yescapaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F248038727C574CA00C6654E /* yescapaUITests.swift */; };
 		F248038A27C574CA00C6654E /* yescapaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F248038927C574CA00C6654E /* yescapaUITestsLaunchTests.swift */; };
-		F24803E427C57F4400C6654E /* VehiclesBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24803E327C57F4400C6654E /* VehiclesBO.swift */; };
-		F24803E727C5816D00C6654E /* NetworkRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24803E627C5816D00C6654E /* NetworkRouterProtocol.swift */; };
-		F24803E927C581E400C6654E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24803E827C581E400C6654E /* NetworkError.swift */; };
-		F24803EB27C5843700C6654E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24803EA27C5843700C6654E /* Logger.swift */; };
-		F24803ED27C58B0600C6654E /* URLSessionServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24803EC27C58B0600C6654E /* URLSessionServiceProvider.swift */; };
-		F24803EF27C5A2D400C6654E /* VehicleServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24803EE27C5A2D400C6654E /* VehicleServiceProvider.swift */; };
-		F24804E627C68BF700C6654E /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24804E527C68BF600C6654E /* Decoder.swift */; };
 		F24804E827C692DC00C6654E /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24804E727C692DC00C6654E /* AppAppearance.swift */; };
 		F268B6BA27C695ED00B452B0 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F268B6B927C695ED00B452B0 /* AppDIContainer.swift */; };
 		F268B6BC27C6961700B452B0 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F268B6BB27C6961700B452B0 /* AppRouter.swift */; };
-		F268B6C027C696C400B452B0 /* VehicleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F268B6BF27C696C400B452B0 /* VehicleRouter.swift */; };
-		F268B6C227C6972F00B452B0 /* ServiceProviderProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F268B6C127C6972F00B452B0 /* ServiceProviderProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		F2098D4327C6C11200BB426C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2098D3E27C6C11200BB426C /* Network.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F2098D0727C6C03700BB426C;
+			remoteInfo = Network;
+		};
+		F2098D4527C6C11200BB426C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2098D3E27C6C11200BB426C /* Network.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F2098D0F27C6C03700BB426C;
+			remoteInfo = NetworkTests;
+		};
 		F248037A27C574CA00C6654E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F248035B27C574C800C6654E /* Project object */;
@@ -46,7 +54,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F2098D5727C6C15E00BB426C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F2098D5627C6C15E00BB426C /* Network.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		F2098D3E27C6C11200BB426C /* Network.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Network.xcodeproj; sourceTree = "<group>"; };
+		F2098E4C27C7CDC200BB426C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		F2098E4D27C7CDC200BB426C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		F2098E5127C7CE3400BB426C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F2098E5327C7CE3800BB426C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F248036327C574C800C6654E /* yescapa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yescapa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F248036627C574C800C6654E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F248036A27C574C800C6654E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,18 +86,9 @@
 		F248038327C574CA00C6654E /* yescapaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = yescapaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F248038727C574CA00C6654E /* yescapaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yescapaUITests.swift; sourceTree = "<group>"; };
 		F248038927C574CA00C6654E /* yescapaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yescapaUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		F24803E327C57F4400C6654E /* VehiclesBO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesBO.swift; sourceTree = "<group>"; };
-		F24803E627C5816D00C6654E /* NetworkRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouterProtocol.swift; sourceTree = "<group>"; };
-		F24803E827C581E400C6654E /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
-		F24803EA27C5843700C6654E /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
-		F24803EC27C58B0600C6654E /* URLSessionServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionServiceProvider.swift; sourceTree = "<group>"; };
-		F24803EE27C5A2D400C6654E /* VehicleServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleServiceProvider.swift; sourceTree = "<group>"; };
-		F24804E527C68BF600C6654E /* Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
 		F24804E727C692DC00C6654E /* AppAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
 		F268B6B927C695ED00B452B0 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		F268B6BB27C6961700B452B0 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
-		F268B6BF27C696C400B452B0 /* VehicleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleRouter.swift; sourceTree = "<group>"; };
-		F268B6C127C6972F00B452B0 /* ServiceProviderProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProviderProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2098D5527C6C15E00BB426C /* Network.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +117,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F2098D2F27C6C0B500BB426C /* Communication */ = {
+			isa = PBXGroup;
+			children = (
+				F2098D3E27C6C11200BB426C /* Network.xcodeproj */,
+			);
+			path = Communication;
+			sourceTree = "<group>";
+		};
+		F2098D3F27C6C11200BB426C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F2098D4427C6C11200BB426C /* Network.framework */,
+				F2098D4627C6C11200BB426C /* NetworkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F2098D5427C6C15E00BB426C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F248035A27C574C800C6654E = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +148,7 @@
 				F248037C27C574CA00C6654E /* yescapaTests */,
 				F248038627C574CA00C6654E /* yescapaUITests */,
 				F248036427C574C800C6654E /* Products */,
+				F2098D5427C6C15E00BB426C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,14 +165,14 @@
 		F248036527C574C800C6654E /* yescapa */ = {
 			isa = PBXGroup;
 			children = (
+				F2098D2F27C6C0B500BB426C /* Communication */,
 				F268B6C327C6978A00B452B0 /* Application */,
-				F268B6C427C697B800B452B0 /* Helpers */,
-				F24803E527C57F5C00C6654E /* Network */,
 				F248036A27C574C800C6654E /* ViewController.swift */,
 				F248036C27C574C800C6654E /* Main.storyboard */,
 				F248036F27C574CA00C6654E /* Assets.xcassets */,
 				F248037127C574CA00C6654E /* LaunchScreen.storyboard */,
 				F248037427C574CA00C6654E /* Info.plist */,
+				F2098E5227C7CE3400BB426C /* Localizable.strings */,
 			);
 			path = yescapa;
 			sourceTree = "<group>";
@@ -150,37 +194,6 @@
 			path = yescapaUITests;
 			sourceTree = "<group>";
 		};
-		F24803E527C57F5C00C6654E /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				F24804E527C68BF600C6654E /* Decoder.swift */,
-				F24803E827C581E400C6654E /* NetworkError.swift */,
-				F24803E627C5816D00C6654E /* NetworkRouterProtocol.swift */,
-				F268B6BD27C6969900B452B0 /* ServiceProvider */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		F268B6BD27C6969900B452B0 /* ServiceProvider */ = {
-			isa = PBXGroup;
-			children = (
-				F268B6C127C6972F00B452B0 /* ServiceProviderProtocols.swift */,
-				F24803EC27C58B0600C6654E /* URLSessionServiceProvider.swift */,
-				F268B6BE27C696AC00B452B0 /* Vehicle */,
-			);
-			path = ServiceProvider;
-			sourceTree = "<group>";
-		};
-		F268B6BE27C696AC00B452B0 /* Vehicle */ = {
-			isa = PBXGroup;
-			children = (
-				F24803E327C57F4400C6654E /* VehiclesBO.swift */,
-				F268B6BF27C696C400B452B0 /* VehicleRouter.swift */,
-				F24803EE27C5A2D400C6654E /* VehicleServiceProvider.swift */,
-			);
-			path = Vehicle;
-			sourceTree = "<group>";
-		};
 		F268B6C327C6978A00B452B0 /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,14 +203,6 @@
 				F268B6BB27C6961700B452B0 /* AppRouter.swift */,
 			);
 			path = Application;
-			sourceTree = "<group>";
-		};
-		F268B6C427C697B800B452B0 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				F24803EA27C5843700C6654E /* Logger.swift */,
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +215,7 @@
 				F248035F27C574C800C6654E /* Sources */,
 				F248036027C574C800C6654E /* Frameworks */,
 				F248036127C574C800C6654E /* Resources */,
+				F2098D5727C6C15E00BB426C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -286,10 +292,17 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = F248035A27C574C800C6654E;
 			productRefGroup = F248036427C574C800C6654E /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F2098D3F27C6C11200BB426C /* Products */;
+					ProjectRef = F2098D3E27C6C11200BB426C /* Network.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				F248036227C574C800C6654E /* yescapa */,
@@ -299,12 +312,30 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		F2098D4427C6C11200BB426C /* Network.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Network.framework;
+			remoteRef = F2098D4327C6C11200BB426C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F2098D4627C6C11200BB426C /* NetworkTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = NetworkTests.xctest;
+			remoteRef = F2098D4527C6C11200BB426C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		F248036127C574C800C6654E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F248037327C574CA00C6654E /* LaunchScreen.storyboard in Resources */,
+				F2098E5027C7CE3400BB426C /* Localizable.strings in Resources */,
 				F248037027C574CA00C6654E /* Assets.xcassets in Resources */,
 				F248036E27C574C800C6654E /* Main.storyboard in Resources */,
 			);
@@ -331,19 +362,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F268B6C227C6972F00B452B0 /* ServiceProviderProtocols.swift in Sources */,
 				F268B6BA27C695ED00B452B0 /* AppDIContainer.swift in Sources */,
 				F248036B27C574C800C6654E /* ViewController.swift in Sources */,
-				F24803EB27C5843700C6654E /* Logger.swift in Sources */,
-				F24803ED27C58B0600C6654E /* URLSessionServiceProvider.swift in Sources */,
-				F24803EF27C5A2D400C6654E /* VehicleServiceProvider.swift in Sources */,
-				F268B6C027C696C400B452B0 /* VehicleRouter.swift in Sources */,
-				F24804E627C68BF700C6654E /* Decoder.swift in Sources */,
 				F248036727C574C800C6654E /* AppDelegate.swift in Sources */,
-				F24803E427C57F4400C6654E /* VehiclesBO.swift in Sources */,
 				F268B6BC27C6961700B452B0 /* AppRouter.swift in Sources */,
-				F24803E727C5816D00C6654E /* NetworkRouterProtocol.swift in Sources */,
-				F24803E927C581E400C6654E /* NetworkError.swift in Sources */,
 				F24804E827C692DC00C6654E /* AppAppearance.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,10 +403,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		F2098E5227C7CE3400BB426C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2098E5127C7CE3400BB426C /* en */,
+				F2098E5327C7CE3800BB426C /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		F248036C27C574C800C6654E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				F248036D27C574C800C6654E /* Base */,
+				F2098E4C27C7CDC200BB426C /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -393,6 +425,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F248037227C574CA00C6654E /* Base */,
+				F2098E4D27C7CDC200BB426C /* fr */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -404,6 +437,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -465,6 +499,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

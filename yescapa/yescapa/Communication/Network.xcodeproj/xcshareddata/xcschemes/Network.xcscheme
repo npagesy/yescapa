@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F248036227C574C800C6654E"
-               BuildableName = "yescapa.app"
-               BlueprintName = "yescapa"
-               ReferencedContainer = "container:yescapa.xcodeproj">
+               BlueprintIdentifier = "F2098D0627C6C03700BB426C"
+               BuildableName = "Network.framework"
+               BlueprintName = "Network"
+               ReferencedContainer = "container:Network.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,30 +33,10 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F248037827C574CA00C6654E"
-               BuildableName = "yescapaTests.xctest"
-               BlueprintName = "yescapaTests"
-               ReferencedContainer = "container:yescapa.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F248038227C574CA00C6654E"
-               BuildableName = "yescapaUITests.xctest"
-               BlueprintName = "yescapaUITests"
-               ReferencedContainer = "container:yescapa.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "F2098D0E27C6C03700BB426C"
                BuildableName = "NetworkTests.xctest"
                BlueprintName = "NetworkTests"
-               ReferencedContainer = "container:yescapa/Communication/Network.xcodeproj">
+               ReferencedContainer = "container:Network.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -71,16 +51,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F248036227C574C800C6654E"
-            BuildableName = "yescapa.app"
-            BlueprintName = "yescapa"
-            ReferencedContainer = "container:yescapa.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -88,16 +58,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F248036227C574C800C6654E"
-            BuildableName = "yescapa.app"
-            BlueprintName = "yescapa"
-            ReferencedContainer = "container:yescapa.xcodeproj">
+            BlueprintIdentifier = "F2098D0627C6C03700BB426C"
+            BuildableName = "Network.framework"
+            BlueprintName = "Network"
+            ReferencedContainer = "container:Network.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  yescapa
+
+  Created by PAGESY Noëline (i-BP - OPEN SAS) on 24/02/2022.
+  
+*/
+
+"not_found" = "oups";
+"technical_error" = "Technical error";
+"technical_server_error" = "An error has occurred, please try again later.";
+"network_error" = "Network error. Make sure you are connected.";

@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - VehiculesBO
 public struct VehiclesBO: Decodable {
-    let vehicles: [VehicleBO]
+    let results: [VehicleBO]
 }
 
 // MARK: - VehicleBO

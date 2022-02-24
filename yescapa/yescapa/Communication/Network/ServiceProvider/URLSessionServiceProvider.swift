@@ -10,6 +10,8 @@ import Foundation
 public class URLSessionServiceProvider: ServiceProviderProtocol {
     private let session = URLSession(configuration: URLSessionConfiguration.default)
     
+    public init() {}
+    
     public func execute(route: NetworkRouterProtocol, completion: @escaping (Result<Data, Error>) -> Void) {
         do {
             let request = try route.asURLRequest()

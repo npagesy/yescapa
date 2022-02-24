@@ -8,24 +8,22 @@
 import Foundation
 
 public protocol VehicleServiceProviderProtocol {
-    func getVehicles(completion: @escaping (VehiclesBO?) -> Void)
+    func getVehicles(completion: @escaping (Result<VehiclesBO?, Error>) -> Void)
 }
 
 class VehicleServiceProvider: URLSessionServiceProvider, VehicleServiceProviderProtocol {
-    func getVehicles(completion: @escaping (VehiclesBO?) -> Void) {
+    func getVehicles(completion: @escaping (Result<VehiclesBO?, Error>) -> Void) {
         execute(route: VehicleRouter.getVehicles) { (result: Result<Data, Error>) in
             switch result {
             case .success(let data):
                 do {
                     let vehicles = try Decoder<VehiclesBO>().decode(from: data)
-                    Logger.log(level: .debug, vehicles)
-                    completion(vehicles)
+                    completion(.success(vehicles))
                 } catch {
-                    completion(nil)
+                    completion(.failure(error))
                 }
             case .failure(let error):
-                Logger.log(level: .error, error)
-                completion(nil)
+                completion(.failure(error))
             }
         }
     }

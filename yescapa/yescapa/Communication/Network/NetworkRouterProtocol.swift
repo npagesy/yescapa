@@ -16,8 +16,7 @@ public protocol NetworkRouterProtocol {
 extension NetworkRouterProtocol {
     func asURLRequest() throws -> URLRequest {
         guard var urlComponents = URLComponents(string: urlString) else {
-            Logger.log(level: .error, "Erreur lors de la génération de l'url")
-            throw NetworkError.technicalError
+            throw RequestError.urlComponents
         }
         
         if !path.isEmpty { urlComponents.path += path }
@@ -26,8 +25,7 @@ extension NetworkRouterProtocol {
             urlRequest.httpMethod = method
             return urlRequest
         } else {
-            Logger.log(level: .error, "Erreur lors de la génération de l'url")
-            throw NetworkError.technicalError
+            throw RequestError.urlComponents
         }
     }
 }

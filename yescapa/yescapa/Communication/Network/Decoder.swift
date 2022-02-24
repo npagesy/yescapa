@@ -13,8 +13,7 @@ struct Decoder<T> where T: Decodable {
             let object = try JSONDecoder().decode(T.self, from: data)
             return object
         } catch {
-            Logger.log(level: .error, "Erreur lors de la")
-            throw NetworkError.technicalError
+            throw RequestError.decodingError(error)
         }
     }
 }
