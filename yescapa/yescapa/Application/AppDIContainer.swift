@@ -10,7 +10,7 @@ import Network
 import UIKit
 
 final class AppDIContainer {
-    lazy var webServiceProviderManager: ServiceProviderProtocol = URLSessionServiceProvider()
+    lazy var webServiceProviderManager: ServiceProviderHelperProtocol = URLSessionServiceProvider()
     
     private let navigationController: UINavigationController
     

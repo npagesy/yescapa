@@ -11,17 +11,17 @@ import UIKit
 
 final class AppRouter {
     private weak var navigationController: UINavigationController?
-    private var webServiceProviderManager: ServiceProviderProtocol
+    private var webServiceProviderManager: ServiceProviderHelperProtocol
 
-    init(navigationController: UINavigationController, webServiceProviderManager: ServiceProviderProtocol) {
+    init(navigationController: UINavigationController, webServiceProviderManager: ServiceProviderHelperProtocol) {
         self.navigationController = navigationController
         self.webServiceProviderManager = webServiceProviderManager
     }
     
     func startApplication() {
 //        let delegate = VehiclesListViewController(showVehicleDetail: showVehicleDetail)
-//        let viewController = assembleVehiclesListViewController(delegate: delegate)
-//        navigationController?.pushViewController(viewController, animated: true)
+        let viewController = assembleVehiclesListViewController()
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
 //    private func showVehicleDetail(vehicle: Vehicle) {
@@ -29,9 +29,11 @@ final class AppRouter {
 //        navigationController?.pushViewController(viewController, animated: true)
 //    }
     
-//    private func assembleVehiclesListViewController(delegate: VehiclesListPresenterDelegate) -> VehiclesListViewController {
-//
-//    }
+    private func assembleVehiclesListViewController() -> VehiclesTableViewController {
+        let viewController = VehiclesTableViewController()
+        viewController.presenter = VehiclesPresenter(view: viewController, manager: webServiceProviderManager)
+        return viewController
+    }
     
 //    private func assembleVehicleDetailViewController(vehicle: Vehicle) -> VehicleDetailViewController {
 //

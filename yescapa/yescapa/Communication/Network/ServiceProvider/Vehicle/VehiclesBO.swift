@@ -9,27 +9,27 @@ import Foundation
 
 // MARK: - VehiculesBO
 public struct VehiclesBO: Decodable {
-    let results: [VehicleBO]
+    public let results: [VehicleBO]
 }
 
 // MARK: - VehicleBO
-struct VehicleBO: Decodable {
-    let id: Int
-    let title: String
-    let startingPrice: Int
-    let currencyUsed: CurrencyUsed
-    let reviewAverage: Double
-    let reviewCount: Int
-    let vehicleType: String
-    let vehicleBeds: Int
-    let vehicleSeats: Int
-    let vehicleLocationCity: String
-    let vehicleLocationZipcode: String
-    let vehicleOwnerFirstName: String
-    let vehicleOwnerLanguage: VehicleOwnerLanguage
-    let vehicleOwnerPictureURL: String
-    let url: String
-    let pictures: [Picture]
+public struct VehicleBO: Decodable {
+    public let id: Int
+    public let title: String
+    public let startingPrice: Int
+    public let currencyUsed: CurrencyUsed
+    public let reviewAverage: Double
+    public let reviewCount: Int
+    public let vehicleType: String
+    public let vehicleBeds: Int
+    public let vehicleSeats: Int
+    public let vehicleLocationCity: String
+    public let vehicleLocationZipcode: String
+    public let vehicleOwnerFirstName: String
+    public let vehicleOwnerLanguage: VehicleOwnerLanguage
+    public let vehicleOwnerPictureURL: String
+    public let url: String
+    public let pictures: [Picture]
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -51,16 +51,16 @@ struct VehicleBO: Decodable {
     }
 }
 
-enum CurrencyUsed: String, Decodable {
+public enum CurrencyUsed: String, Decodable {
     case eur = "EUR"
 }
 
 // MARK: - Picture
-struct Picture: Decodable {
-    let id: String
-    let url: String
+public struct Picture: Decodable {
+    public let id: String
+    public let url: String
 }
 
-enum VehicleOwnerLanguage: String, Decodable {
+public enum VehicleOwnerLanguage: String, Decodable {
     case fr = "FR"
 }
