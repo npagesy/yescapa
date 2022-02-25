@@ -22,4 +22,9 @@ struct Vehicle {
     func getFormattedStartingPrice() -> String {
         "\(price)€/j"
     }
+    
+    func roundedReview() -> Int {
+        let reviewAverage = Int(reviewAverage.rounded(.toNearestOrEven))
+        return reviewAverage
+    }
 }

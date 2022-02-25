@@ -17,5 +17,4 @@ protocol VehiclesPresenterProtocol {
 
 protocol VehiclesViewControllerProtocol: AnyObject {
     func reloadData()
-    func show(viewController: UIViewController)
 }

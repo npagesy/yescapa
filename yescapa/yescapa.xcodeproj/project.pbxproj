@@ -27,6 +27,9 @@
 		F2098E7B27C8D70000BB426C /* VehiclesTableViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2098E7A27C8D70000BB426C /* VehiclesTableViewControllerMock.swift */; };
 		F2098E7E27C8D9A300BB426C /* VehiclesTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2098E7D27C8D9A300BB426C /* VehiclesTableViewControllerTests.swift */; };
 		F2098E8027C8D9CD00BB426C /* VehiclesPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2098E7F27C8D9CD00BB426C /* VehiclesPresenterMock.swift */; };
+		F2098E8327C8DDFA00BB426C /* VehicleDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2098E8227C8DDFA00BB426C /* VehicleDetailPresenter.swift */; };
+		F2098E8527C8DE3300BB426C /* VehicleDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2098E8427C8DE3300BB426C /* VehicleDetailProtocols.swift */; };
+		F2098E8727C8DE8C00BB426C /* VehicleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2098E8627C8DE8C00BB426C /* VehicleDetailViewController.swift */; };
 		F248036727C574C800C6654E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F248036627C574C800C6654E /* AppDelegate.swift */; };
 		F248036E27C574C800C6654E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F248036C27C574C800C6654E /* Main.storyboard */; };
 		F248037027C574CA00C6654E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F248036F27C574CA00C6654E /* Assets.xcassets */; };
@@ -106,6 +109,9 @@
 		F2098E7A27C8D70000BB426C /* VehiclesTableViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesTableViewControllerMock.swift; sourceTree = "<group>"; };
 		F2098E7D27C8D9A300BB426C /* VehiclesTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesTableViewControllerTests.swift; sourceTree = "<group>"; };
 		F2098E7F27C8D9CD00BB426C /* VehiclesPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesPresenterMock.swift; sourceTree = "<group>"; };
+		F2098E8227C8DDFA00BB426C /* VehicleDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailPresenter.swift; sourceTree = "<group>"; };
+		F2098E8427C8DE3300BB426C /* VehicleDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailProtocols.swift; sourceTree = "<group>"; };
+		F2098E8627C8DE8C00BB426C /* VehicleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailViewController.swift; sourceTree = "<group>"; };
 		F248036327C574C800C6654E /* yescapa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yescapa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F248036627C574C800C6654E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F248036D27C574C800C6654E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -221,6 +227,16 @@
 			path = Mock;
 			sourceTree = "<group>";
 		};
+		F2098E8127C8DDE200BB426C /* VehicleDetail */ = {
+			isa = PBXGroup;
+			children = (
+				F2098E8227C8DDFA00BB426C /* VehicleDetailPresenter.swift */,
+				F2098E8427C8DE3300BB426C /* VehicleDetailProtocols.swift */,
+				F2098E8627C8DE8C00BB426C /* VehicleDetailViewController.swift */,
+			);
+			path = VehicleDetail;
+			sourceTree = "<group>";
+		};
 		F248035A27C574C800C6654E = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +268,7 @@
 				F2098E6B27C8C19200BB426C /* UIImageView+extension.swift */,
 				F2098E6727C8BC8800BB426C /* RatingView.swift */,
 				F2098E5B27C7E0F300BB426C /* VehiclesList */,
+				F2098E8127C8DDE200BB426C /* VehicleDetail */,
 				F248036C27C574C800C6654E /* Main.storyboard */,
 				F248036F27C574CA00C6654E /* Assets.xcassets */,
 				F248037127C574CA00C6654E /* LaunchScreen.storyboard */,
@@ -457,10 +474,13 @@
 				F2098E6C27C8C19200BB426C /* UIImageView+extension.swift in Sources */,
 				F2098E6A27C8C16A00BB426C /* UIImageLoader.swift in Sources */,
 				F248036727C574C800C6654E /* AppDelegate.swift in Sources */,
+				F2098E8327C8DDFA00BB426C /* VehicleDetailPresenter.swift in Sources */,
+				F2098E8727C8DE8C00BB426C /* VehicleDetailViewController.swift in Sources */,
 				F268B6BC27C6961700B452B0 /* AppRouter.swift in Sources */,
 				F2098E5F27C7E11800BB426C /* VehiclesProtocols.swift in Sources */,
 				F2098E6427C8061E00BB426C /* Vehicles.swift in Sources */,
 				F24804E827C692DC00C6654E /* AppAppearance.swift in Sources */,
+				F2098E8527C8DE3300BB426C /* VehicleDetailProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

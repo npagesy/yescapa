@@ -18,7 +18,7 @@ final class VehicleTableViewCell: UITableViewCell {
     
     lazy var vehicleImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -27,14 +27,12 @@ final class VehicleTableViewCell: UITableViewCell {
     lazy var vehicleMark: UILabel = {
         let label = UILabel()
         label.font = UIFont.preferredFont(forTextStyle: .headline)
-        label.text = "Vehicle mark"
         return label
     }()
     
     lazy var vehiclePrice: UILabel = {
         let label = UILabel()
         label.font = UIFont.preferredFont(forTextStyle: .headline)
-        label.text = "xx€/j"
         return label
     }()
     
@@ -53,7 +51,6 @@ final class VehicleTableViewCell: UITableViewCell {
     lazy var vehicleLocation: UILabel = {
         let label = UILabel()
         label.font = UIFont.preferredFont(forTextStyle: .body)
-        label.text = "Location"
         return label
     }()
     
@@ -81,7 +78,7 @@ final class VehicleTableViewCell: UITableViewCell {
             vehicleInfoStackView
         ])
         stackView.axis = .vertical
-        stackView.alignment = .leading
+        stackView.alignment = .fill
         stackView.spacing = 8
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
@@ -114,16 +111,8 @@ private extension VehicleTableViewCell {
         stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8.0).isActive = true
         stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8.0).isActive = true
         
-        vehicleImageView.leadingAnchor.constraint(equalTo: stackView.leadingAnchor).isActive = true
-        vehicleImageView.trailingAnchor.constraint(equalTo: stackView.trailingAnchor).isActive = true
         vehicleImageView.heightAnchor.constraint(equalToConstant: 150.0).isActive = true
-        
-        vehicleDescriptionStackView.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: 8.0).isActive = true
-        vehicleDescriptionStackView.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: -8.0).isActive = true
         vehicleDescriptionStackView.heightAnchor.constraint(equalToConstant: 40.0).isActive = true
-        
-        vehicleInfoStackView.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: 8.0).isActive = true
-        vehicleInfoStackView.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: -8.0).isActive = true
         vehicleInfoStackView.heightAnchor.constraint(equalToConstant: 40.0).isActive = true
     }
 }
@@ -137,7 +126,7 @@ extension VehicleTableViewCell: VehicleTableViewCellProtocol {
         vehiclePrice.text = model.getFormattedStartingPrice()
         
         vehicleLocation.text = model.location
-        vehicleRating.rating = Int(model.reviewAverage.rounded())
+        vehicleRating.rating = model.roundedReview()
         vehicleRating.count = model.reviewCount
     }
 }

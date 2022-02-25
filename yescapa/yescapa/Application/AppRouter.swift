@@ -19,23 +19,25 @@ final class AppRouter {
     }
     
     func startApplication() {
-//        let delegate = VehiclesListViewController(showVehicleDetail: showVehicleDetail)
         let viewController = assembleVehiclesListViewController()
         navigationController?.pushViewController(viewController, animated: true)
     }
-    
-//    private func showVehicleDetail(vehicle: Vehicle) {
-//        let viewController = assembleVehicleDetailViewController(vehicle: Vehicle)
-//        navigationController?.pushViewController(viewController, animated: true)
-//    }
-    
+
     private func assembleVehiclesListViewController() -> VehiclesTableViewController {
+        let delegate = VehiclesPresenterDelegate(showVehicle: showVehicleDetail)
         let viewController = VehiclesTableViewController()
-        viewController.presenter = VehiclesPresenter(view: viewController, manager: webServiceProviderManager)
+        viewController.presenter = VehiclesPresenter(view: viewController, manager: webServiceProviderManager, delegate: delegate)
         return viewController
     }
     
-//    private func assembleVehicleDetailViewController(vehicle: Vehicle) -> VehicleDetailViewController {
-//
-//    }
+    private func showVehicleDetail(vehicle: Vehicle) {
+        let viewController = assembleVehicleDetailViewController(vehicle: vehicle)
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    private func assembleVehicleDetailViewController(vehicle: Vehicle) -> VehicleDetailViewController {
+        let viewController = VehicleDetailViewController()
+        viewController.presenter = VehicleDetailPresenter(view: viewController, manager: webServiceProviderManager, vehicle: vehicle)
+        return viewController
+    }
 }

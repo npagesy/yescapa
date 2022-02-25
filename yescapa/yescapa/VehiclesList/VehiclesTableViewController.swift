@@ -16,11 +16,6 @@ class VehiclesTableViewController: UITableViewController {
         setupTableViewController()
         presenter?.didLoad()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.hidesBarsOnSwipe = true
-    }
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,6 +44,7 @@ private extension VehiclesTableViewController {
         tableView.separatorStyle = .none
         tableView.register(VehicleTableViewCell.self, forCellReuseIdentifier: VehicleTableViewCell.identifier)
         
+        navigationItem.backButtonTitle = ""
         if let appearance = navigationController?.navigationBar.standardAppearance {
             appearance.configureWithTransparentBackground()
             navigationController?.navigationBar.standardAppearance = appearance
@@ -62,9 +58,5 @@ private extension VehiclesTableViewController {
 extension VehiclesTableViewController: VehiclesViewControllerProtocol {
     func reloadData() {
         tableView.reloadData()
-    }
-    
-    func show(viewController: UIViewController) {
-        // TODO: show detail view
     }
 }
