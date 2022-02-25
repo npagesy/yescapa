@@ -12,7 +12,7 @@ class VehiclesPresenter {
     weak var view: VehiclesViewControllerProtocol?
     private let manager: ServiceProviderHelperProtocol
     
-    private var model: Vehicles?
+    var model: Vehicles?
     
     init(view: VehiclesViewControllerProtocol, manager: ServiceProviderHelperProtocol) {
         self.view = view

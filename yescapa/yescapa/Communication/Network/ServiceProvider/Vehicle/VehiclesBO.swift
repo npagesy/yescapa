@@ -59,6 +59,11 @@ public enum CurrencyUsed: String, Decodable {
 public struct Picture: Decodable {
     public let id: String
     public let url: String
+    
+    public init(id: String, url: String) {
+        self.id = id
+        self.url = url
+    }
 }
 
 public enum VehicleOwnerLanguage: String, Decodable {

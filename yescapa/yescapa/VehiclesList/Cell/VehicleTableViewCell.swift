@@ -16,7 +16,7 @@ final class VehicleTableViewCell: UITableViewCell {
     
     static let identifier = "VehicleTableViewCellIdentifier"
     
-    private lazy var vehicleImageView: UIImageView = {
+    lazy var vehicleImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
@@ -24,14 +24,14 @@ final class VehicleTableViewCell: UITableViewCell {
         return imageView
     }()
     
-    private lazy var vehicleMark: UILabel = {
+    lazy var vehicleMark: UILabel = {
         let label = UILabel()
         label.font = UIFont.preferredFont(forTextStyle: .headline)
         label.text = "Vehicle mark"
         return label
     }()
     
-    private lazy var vehiclePrice: UILabel = {
+    lazy var vehiclePrice: UILabel = {
         let label = UILabel()
         label.font = UIFont.preferredFont(forTextStyle: .headline)
         label.text = "xx€/j"
@@ -50,14 +50,14 @@ final class VehicleTableViewCell: UITableViewCell {
         return stackView
     }()
     
-    private lazy var vehicleLocation: UILabel = {
+    lazy var vehicleLocation: UILabel = {
         let label = UILabel()
         label.font = UIFont.preferredFont(forTextStyle: .body)
         label.text = "Location"
         return label
     }()
     
-    private lazy var vehicleRating: RatingView = {
+    lazy var vehicleRating: RatingView = {
         let ratingView = RatingView()
         return ratingView
     }()
@@ -74,7 +74,7 @@ final class VehicleTableViewCell: UITableViewCell {
         return stackView
     }()
     
-    private lazy var stackView: UIStackView = {
+    lazy var stackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [
             vehicleImageView,
             vehicleDescriptionStackView,
@@ -86,8 +86,6 @@ final class VehicleTableViewCell: UITableViewCell {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
-    
-    var onReuse: () -> Void = {}
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
