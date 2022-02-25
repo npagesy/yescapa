@@ -35,7 +35,6 @@
 		F2098E9027C9370100BB426C /* VehicleDetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2098E8F27C9370100BB426C /* VehicleDetailPresenterTests.swift */; };
 		F2098E9227C938CD00BB426C /* VehicleDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2098E9127C938CD00BB426C /* VehicleDetailViewControllerTests.swift */; };
 		F248036727C574C800C6654E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F248036627C574C800C6654E /* AppDelegate.swift */; };
-		F248036E27C574C800C6654E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F248036C27C574C800C6654E /* Main.storyboard */; };
 		F248037027C574CA00C6654E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F248036F27C574CA00C6654E /* Assets.xcassets */; };
 		F248037327C574CA00C6654E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F248037127C574CA00C6654E /* LaunchScreen.storyboard */; };
 		F248038827C574CA00C6654E /* yescapaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F248038727C574CA00C6654E /* yescapaUITests.swift */; };
@@ -92,7 +91,6 @@
 
 /* Begin PBXFileReference section */
 		F2098D3E27C6C11200BB426C /* Network.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Network.xcodeproj; sourceTree = "<group>"; };
-		F2098E4C27C7CDC200BB426C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		F2098E4D27C7CDC200BB426C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		F2098E5127C7CE3400BB426C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F2098E5327C7CE3800BB426C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -122,7 +120,6 @@
 		F2098E9127C938CD00BB426C /* VehicleDetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailViewControllerTests.swift; sourceTree = "<group>"; };
 		F248036327C574C800C6654E /* yescapa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yescapa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F248036627C574C800C6654E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F248036D27C574C800C6654E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F248036F27C574CA00C6654E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F248037227C574CA00C6654E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F248037427C574CA00C6654E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -288,7 +285,6 @@
 				F2098E6727C8BC8800BB426C /* RatingView.swift */,
 				F2098E5B27C7E0F300BB426C /* VehiclesList */,
 				F2098E8127C8DDE200BB426C /* VehicleDetail */,
-				F248036C27C574C800C6654E /* Main.storyboard */,
 				F248036F27C574CA00C6654E /* Assets.xcassets */,
 				F248037127C574CA00C6654E /* LaunchScreen.storyboard */,
 				F248037427C574CA00C6654E /* Info.plist */,
@@ -459,7 +455,6 @@
 				F248037327C574CA00C6654E /* LaunchScreen.storyboard in Resources */,
 				F2098E5027C7CE3400BB426C /* Localizable.strings in Resources */,
 				F248037027C574CA00C6654E /* Assets.xcassets in Resources */,
-				F248036E27C574C800C6654E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,15 +549,6 @@
 				F2098E5327C7CE3800BB426C /* fr */,
 			);
 			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-		F248036C27C574C800C6654E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F248036D27C574C800C6654E /* Base */,
-				F2098E4C27C7CDC200BB426C /* fr */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		F248037127C574CA00C6654E /* LaunchScreen.storyboard */ = {
@@ -706,7 +692,6 @@
 				INFOPLIST_FILE = yescapa/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -735,7 +720,6 @@
 				INFOPLIST_FILE = yescapa/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
