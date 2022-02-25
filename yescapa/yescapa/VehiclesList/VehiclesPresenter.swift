@@ -8,17 +8,13 @@
 import Foundation
 import Network
 
-public struct VehiclesPresenterDelegate {
-    let showVehicle: (_ vehicle: Vehicle) -> Void
-}
-
 class VehiclesPresenter {
     private weak var view: VehiclesViewControllerProtocol?
     private let manager: ServiceProviderHelperProtocol
-    private let delegate: VehiclesPresenterDelegate
+    private let delegate: VehiclesPresenterDelegate?
     var model: Vehicles?
     
-    init(view: VehiclesViewControllerProtocol, manager: ServiceProviderHelperProtocol, delegate: VehiclesPresenterDelegate) {
+    init(view: VehiclesViewControllerProtocol, manager: ServiceProviderHelperProtocol, delegate: VehiclesPresenterDelegate? = nil) {
         self.view = view
         self.manager = manager
         self.delegate = delegate
@@ -56,6 +52,6 @@ extension VehiclesPresenter: VehiclesPresenterProtocol {
     
     func didSelect(indexPath: IndexPath) {
         guard let selectedVehicle = model?.list[indexPath.row] else { return }
-        delegate.showVehicle(selectedVehicle)
+        delegate?.showVehicle(selectedVehicle)
     }
 }

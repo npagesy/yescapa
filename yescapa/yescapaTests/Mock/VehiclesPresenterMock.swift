@@ -30,6 +30,6 @@ class VehiclesPresenterMock: VehiclesPresenterProtocol {
     }
     
     func didSelect(indexPath: IndexPath) {
-        didLoadCallStatus = true
+        didSelectCallStatus = true
     }
 }

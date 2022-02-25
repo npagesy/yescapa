@@ -50,7 +50,7 @@ class VehicleTableViewCellTests: XCTestCase {
         XCTAssertEqual(cell.vehicleMark.text, model.title)
         XCTAssertEqual(cell.vehiclePrice.text, model.getFormattedStartingPrice())
         XCTAssertEqual(cell.vehicleLocation.text, model.location)
-        XCTAssertEqual(cell.vehicleRating.rating, Int(model.reviewAverage.rounded()))
+        XCTAssertEqual(cell.vehicleRating.rating, model.roundedReview())
         XCTAssertEqual(cell.vehicleRating.count, model.reviewCount)
     }
 }

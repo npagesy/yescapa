@@ -8,6 +8,10 @@
 import Foundation
 import UIKit
 
+public struct VehiclesPresenterDelegate {
+    let showVehicle: (_ vehicle: Vehicle) -> Void
+}
+
 protocol VehiclesPresenterProtocol {
     func didLoad()
     func numberOfRows() -> Int

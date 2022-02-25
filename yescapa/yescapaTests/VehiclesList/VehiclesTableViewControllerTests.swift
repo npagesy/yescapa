@@ -52,13 +52,13 @@ extension VehiclesTableViewControllerTests {
         // Then
         XCTAssertTrue(package.presenter.willShowCallStatus)
     }
-//
-//    func test_didSelectRow() {
-//        // Given
-//        let package = createSUT()
-//        // When
-//        package.sut.tableView(package.sut.tableView, didSelectRowAt: IndexPath(row: 0, section: 0))
-//        // Then
-//        XCTAssertTrue(package.presenter.didSelectCallStatus)
-//    }
+
+    func test_didSelectRow() {
+        // Given
+        let package = createSUT()
+        // When
+        package.sut.tableView(package.sut.tableView, didSelectRowAt: IndexPath(row: 0, section: 0))
+        // Then
+        XCTAssertTrue(package.presenter.didSelectCallStatus)
+    }
 }

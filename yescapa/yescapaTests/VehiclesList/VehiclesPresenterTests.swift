@@ -20,7 +20,7 @@ class VehiclesPresenterTests: XCTestCase {
     private func createSUT() -> Package {
         let view = VehiclesTableViewControllerMock()
         let manager = ServiceProviderMock()
-        let sut = VehiclesPresenter(view: view, manager: manager)
+        let sut = VehiclesPresenter(view: view, manager: manager, delegate: nil)
         return (sut, view, manager)
     }
 }
@@ -59,6 +59,4 @@ extension VehiclesPresenterTests {
         XCTAssertNotEqual(cell.vehicleRating.rating, 0)
         XCTAssertNotEqual(cell.vehicleRating.count, 0)
     }
-    
-    func test_didSelect() {}
 }

@@ -30,6 +30,10 @@
 		F2098E8327C8DDFA00BB426C /* VehicleDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2098E8227C8DDFA00BB426C /* VehicleDetailPresenter.swift */; };
 		F2098E8527C8DE3300BB426C /* VehicleDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2098E8427C8DE3300BB426C /* VehicleDetailProtocols.swift */; };
 		F2098E8727C8DE8C00BB426C /* VehicleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2098E8627C8DE8C00BB426C /* VehicleDetailViewController.swift */; };
+		F2098E8B27C9367200BB426C /* VehicleDetailPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2098E8A27C9367200BB426C /* VehicleDetailPresenterMock.swift */; };
+		F2098E8D27C936B000BB426C /* VehicleDetailViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2098E8C27C936B000BB426C /* VehicleDetailViewControllerMock.swift */; };
+		F2098E9027C9370100BB426C /* VehicleDetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2098E8F27C9370100BB426C /* VehicleDetailPresenterTests.swift */; };
+		F2098E9227C938CD00BB426C /* VehicleDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2098E9127C938CD00BB426C /* VehicleDetailViewControllerTests.swift */; };
 		F248036727C574C800C6654E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F248036627C574C800C6654E /* AppDelegate.swift */; };
 		F248036E27C574C800C6654E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F248036C27C574C800C6654E /* Main.storyboard */; };
 		F248037027C574CA00C6654E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F248036F27C574CA00C6654E /* Assets.xcassets */; };
@@ -112,6 +116,10 @@
 		F2098E8227C8DDFA00BB426C /* VehicleDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailPresenter.swift; sourceTree = "<group>"; };
 		F2098E8427C8DE3300BB426C /* VehicleDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailProtocols.swift; sourceTree = "<group>"; };
 		F2098E8627C8DE8C00BB426C /* VehicleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailViewController.swift; sourceTree = "<group>"; };
+		F2098E8A27C9367200BB426C /* VehicleDetailPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailPresenterMock.swift; sourceTree = "<group>"; };
+		F2098E8C27C936B000BB426C /* VehicleDetailViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailViewControllerMock.swift; sourceTree = "<group>"; };
+		F2098E8F27C9370100BB426C /* VehicleDetailPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailPresenterTests.swift; sourceTree = "<group>"; };
+		F2098E9127C938CD00BB426C /* VehicleDetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailViewControllerTests.swift; sourceTree = "<group>"; };
 		F248036327C574C800C6654E /* yescapa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yescapa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F248036627C574C800C6654E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F248036D27C574C800C6654E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -223,6 +231,8 @@
 				F2098E7727C8CB5000BB426C /* VehicleServiceProviderMock.swift */,
 				F2098E7A27C8D70000BB426C /* VehiclesTableViewControllerMock.swift */,
 				F2098E7F27C8D9CD00BB426C /* VehiclesPresenterMock.swift */,
+				F2098E8A27C9367200BB426C /* VehicleDetailPresenterMock.swift */,
+				F2098E8C27C936B000BB426C /* VehicleDetailViewControllerMock.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -233,6 +243,15 @@
 				F2098E8227C8DDFA00BB426C /* VehicleDetailPresenter.swift */,
 				F2098E8427C8DE3300BB426C /* VehicleDetailProtocols.swift */,
 				F2098E8627C8DE8C00BB426C /* VehicleDetailViewController.swift */,
+			);
+			path = VehicleDetail;
+			sourceTree = "<group>";
+		};
+		F2098E8E27C936E400BB426C /* VehicleDetail */ = {
+			isa = PBXGroup;
+			children = (
+				F2098E8F27C9370100BB426C /* VehicleDetailPresenterTests.swift */,
+				F2098E9127C938CD00BB426C /* VehicleDetailViewControllerTests.swift */,
 			);
 			path = VehicleDetail;
 			sourceTree = "<group>";
@@ -283,6 +302,7 @@
 			children = (
 				F2098E7927C8D6F000BB426C /* Mock */,
 				F2098E7427C8CA5600BB426C /* VehiclesList */,
+				F2098E8E27C936E400BB426C /* VehicleDetail */,
 			);
 			path = yescapaTests;
 			sourceTree = "<group>";
@@ -489,11 +509,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2098E7327C8C8E100BB426C /* VehiclesTests.swift in Sources */,
+				F2098E9227C938CD00BB426C /* VehicleDetailViewControllerTests.swift in Sources */,
 				F2098E7B27C8D70000BB426C /* VehiclesTableViewControllerMock.swift in Sources */,
 				F2098E7127C8C51400BB426C /* VehicleTableViewCellTests.swift in Sources */,
 				F2098E7E27C8D9A300BB426C /* VehiclesTableViewControllerTests.swift in Sources */,
+				F2098E8B27C9367200BB426C /* VehicleDetailPresenterMock.swift in Sources */,
 				F2098E7827C8CB5000BB426C /* VehicleServiceProviderMock.swift in Sources */,
+				F2098E9027C9370100BB426C /* VehicleDetailPresenterTests.swift in Sources */,
 				F2098E7627C8CA7400BB426C /* VehiclesPresenterTests.swift in Sources */,
+				F2098E8D27C936B000BB426C /* VehicleDetailViewControllerMock.swift in Sources */,
 				F2098E8027C8D9CD00BB426C /* VehiclesPresenterMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
